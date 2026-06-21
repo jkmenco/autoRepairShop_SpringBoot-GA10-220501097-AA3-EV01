@@ -1,0 +1,199 @@
+# ========================================
+# BUILD & COMPILATION
+# ========================================
+target/
+build/
+dist/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+!**/src/main/**/build/
+!**/src/test/**/build/
+dependency-reduced-pom.xml
+
+# ========================================
+# IDE & EDITOR
+# ========================================
+### STS (Spring Tool Suite) ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea/
+.idea_modules/
+*.iws
+*.iml
+*.ipr
+out/
+
+### Eclipse ###
+.metadata
+local.properties
+.loadpath
+.recommenders/
+.externalToolBuilders/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+nbactions.xml
+nb-configuration.xml
+
+### VS Code ###
+.vscode/
+*.code-workspace
+launch.json
+settings.json
+
+### Sublime Text ###
+*.sublime-project
+*.sublime-workspace
+
+### Vim & Vi ###
+*.swp
+*.swo
+*~
+.*.swp
+
+### Atom ###
+.atom/
+
+# ========================================
+# OPERATING SYSTEM
+# ========================================
+### macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+### Windows ###
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+### Linux ###
+.directory
+
+# ========================================
+# RUNTIME & LOGS
+# ========================================
+*.log
+*.log.*
+logs/
+log/
+spring.log
+out/
+*.pid
+
+# ========================================
+# TEMPORARY & BACKUP FILES
+# ========================================
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+*~
+
+# ========================================
+# ENVIRONMENT & SECRETS
+# ========================================
+.env
+.env.local
+.env.*.local
+application-local.properties
+application-dev.properties
+application-prod.properties
+application-test.properties
+secrets/
+*.key
+*.pem
+
+# ========================================
+# DATABASE
+# ========================================
+*.db
+*.sqlite
+*.sqlite3
+*.h2.db
+data/
+
+# ========================================
+# GRADLE (if used)
+# ========================================
+.gradle/
+gradle/
+gradlew
+gradlew.bat
+
+# ========================================
+# MAVEN
+# ========================================
+.mvn/wrapper/maven-wrapper.properties
+pom.xml.tag
+pom.xml.releaseBackup
+release.properties
+release-pom.xml
+pom.xml.versionsBackup
+pom.xml.backup
+
+# ========================================
+# TESTING
+# ========================================
+.coverage/
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# ========================================
+# GENERATED FILES
+# ========================================
+src/main/generated/
+src/test/generated/
+generated-sources/
+generated-test-sources/
+
+# ========================================
+# NODE MODULES (if frontend included)
+# ========================================
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# ========================================
+# DOCKER
+# ========================================
+.dockerignore
+docker-compose.override.yml
+
+# ========================================
+# CI/CD LOCAL
+# ========================================
+.github/workflows/local/
+.gitlab-ci.yml.local
+
+# ========================================
+# MISC
+# ========================================
+HELP.md.local
+.cache
+.parcel-cache
+*.swp
+*.swo
+.project.local
+*.bkp
