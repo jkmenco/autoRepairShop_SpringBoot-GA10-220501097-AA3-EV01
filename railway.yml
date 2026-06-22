@@ -1,4 +1,4 @@
-name: autoRepairShop
+name: autoRepairShop_SpringBoot
 type: Java
 build:
 command:
