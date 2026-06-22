@@ -3,40 +3,22 @@ package com.autorepairshop.dao;
 import com.autorepairshop.model.Product;
 import org.springframework.stereotype.Repository;
 
-import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 
 @Repository
 public class ProductDAO {
-    private String jdbcURL;
-    private String jdbcUsername;
-    private String jdbcPassword;
-
-    public ProductDAO() {
-        try (InputStream input = getClass().getClassLoader().getResourceAsStream("db_credentials.properties")) {
-            Properties prop = new Properties();
-            if (input == null) {
-                System.out.println("❌ No se encontró el archivo de credenciales");
-                return;
-            }
-            prop.load(input);
-            jdbcURL = prop.getProperty("jdbc.url");
-            jdbcUsername = prop.getProperty("jdbc.username");
-            jdbcPassword = prop.getProperty("jdbc.password");
-            System.out.println("✅ Credenciales cargadas correctamente");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+    private String jdbcURL = "jdbc:mysql://reseau.proxy.rlwy.net:48918/railway?useSSL=false&serverTimezone=UTC";
+    private String jdbcUsername = "root";
+    private String jdbcPassword = "gmBaLbCZEGxGAzcsrKrMkWcsxavTcJqQ";
 
     public List<Product> getAllProducts() {
         List<Product> products = new ArrayList<>();
         String sql = "SELECT * FROM products";
 
         try (Connection connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword)) {
+            // ✅ Mensaje de prueba para confirmar conexión
             System.out.println("✅ Conexión exitosa a la base de datos Railway");
 
             Statement stmt = connection.createStatement();
@@ -55,7 +37,7 @@ public class ProductDAO {
         }
         return products;
     }
-
+    
     public void addProduct(Product product) {
         String sql = "INSERT INTO products (name, price) VALUES (?, ?)";
         try (Connection connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
@@ -91,4 +73,6 @@ public class ProductDAO {
             e.printStackTrace();
         }
     }
+
+    
 }

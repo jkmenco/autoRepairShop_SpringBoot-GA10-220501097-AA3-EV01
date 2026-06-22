@@ -129,7 +129,6 @@ secrets/
 *.sqlite3
 *.h2.db
 data/
-src/main/resources/db_credentials.properties
 
 # ========================================
 # GRADLE (if used)
